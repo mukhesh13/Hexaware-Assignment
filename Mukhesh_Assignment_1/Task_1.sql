@@ -9,8 +9,8 @@ CREATE TABLE Customers (
 
 CREATE TABLE Products (
     ProductID INT PRIMARY KEY,
-    ProductName VARCHAR(255),
-    Description TEXT,
+    ProductName VARCHAR(100),
+    Description VARCHAR(255),
     Price DECIMAL(10, 2)
 );
 
@@ -35,10 +35,9 @@ CREATE TABLE Inventory (
     InventoryID INT PRIMARY KEY,
     ProductID INT,
     QuantityInStock INT,
-    LastStockUpdate DATETIME,
+    LastStockUpdate DATE,
     FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
 );
-
 
 SELECT * FROM Customers;
 SELECT * FROM Products;
