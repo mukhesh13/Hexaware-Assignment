@@ -14,7 +14,7 @@ SELECT SUM(TotalAmount) AS TotalRevenue
 FROM Orders;
 
 --4
-DECLARE @CategoryName NVARCHAR(255);
+DECLARE @CategoryName NVARCHAR(8);
 SET @CategoryName = 'Smart LED TV';
 
 SELECT AVG(Quantity) AS AverageQuantityOrdered
